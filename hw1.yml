@@ -1,13 +1,17 @@
 ---
 - hosts: hw1
   remote_user: ubuntu
+  become: yes
   tasks:
+  - name: update
+    raw: sudo apt update
+  - name: install py2
+    apt:
+      name: python
   - name: install apache
-    become: yes
     apt:
       name: 2.4.18-2ubuntu3.9
   - name: git clone
-    become: yes
     git:
       repo: https://github.com/enrui-shi/cse356
       dest: ver/www/html
