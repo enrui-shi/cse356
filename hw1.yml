@@ -14,4 +14,4 @@
   - name: git clone
     git:
       repo: https://github.com/enrui-shi/cse356
-      dest: ver/www/html
+      dest: ../../var/www/html
