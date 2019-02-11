@@ -11,7 +11,11 @@
   - name: install apache
     apt:
       name: apache2
+  - name: clean dir /var/www/html
+    file: 
+      path: /var/www/html
+      state: absent
   - name: git clone
     git:
       repo: https://github.com/enrui-shi/cse356
-      dest: ../../var/www/html
+      dest: /var/www/html
