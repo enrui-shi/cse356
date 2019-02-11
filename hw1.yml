@@ -10,7 +10,7 @@
       name: python
   - name: install apache
     apt:
-      name: 2.4.18-2ubuntu3.9
+      name: apache2
   - name: git clone
     git:
       repo: https://github.com/enrui-shi/cse356
