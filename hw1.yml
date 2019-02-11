@@ -1,0 +1,11 @@
+---
+- hosts: hw1
+  remote_user: ubuntu
+  tasks:
+  - name: install apache
+    apt:
+      name: 2.4.18-2ubuntu3.9
+  - name: git clone
+    git:
+      repo: https://github.com/enrui-shi/cse356
+      dest: ver/www/html
